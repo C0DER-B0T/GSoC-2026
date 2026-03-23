@@ -1,0 +1,7 @@
+numpy
+pandas
+pgmpy
+networkx
+matplotlib
+scikit-learn
+tqdm
