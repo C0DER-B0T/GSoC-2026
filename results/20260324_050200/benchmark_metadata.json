@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "Simulator": "ExampleModel(alarm, n=500)",
+            "Method": "PC(chi_square)",
+            "Run": 1,
+            "Runtime (s)": 17.310956478118896,
+            "SHD": 40.0
+        },
+        {
+            "Simulator": "ExampleModel(alarm, n=500)",
+            "Method": "PC(chi_square)",
+            "Run": 2,
+            "Runtime (s)": 8.658890724182129,
+            "SHD": 33.0
+        },
+        {
+            "Simulator": "ExampleModel(alarm, n=500)",
+            "Method": "PC(chi_square)",
+            "Run": 3,
+            "Runtime (s)": 9.32465648651123,
+            "SHD": 37.0
+        }
+    ],
+    "metadata": {
+        "timestamp": "2026-03-24T05:02:40.404945",
+        "n_runs": 3,
+        "random_state": 42,
+        "simulators": [
+            "ExampleModel(alarm, n=500)"
+        ],
+        "methods": [
+            "PC(chi_square)"
+        ],
+        "metrics": [
+            "SHD"
+        ]
+    }
+}

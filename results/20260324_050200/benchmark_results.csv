@@ -1,0 +1,4 @@
+Simulator,Method,Run,Runtime (s),SHD
+"ExampleModel(alarm, n=500)",PC(chi_square),1,17.310956478118896,40.0
+"ExampleModel(alarm, n=500)",PC(chi_square),2,8.658890724182129,33.0
+"ExampleModel(alarm, n=500)",PC(chi_square),3,9.32465648651123,37.0

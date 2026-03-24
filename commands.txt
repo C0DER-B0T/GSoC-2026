@@ -1,0 +1,3 @@
+mv pgmpy pgmpy_source
+pip install -e "./pgmpy_source[all]"
+python run_benchmark.py
