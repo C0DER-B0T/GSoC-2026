@@ -40,17 +40,21 @@ class PCMethod(BaseMethod):
     def fit(self, data: pd.DataFrame) -> DAG:
         # Use the new API if available
         if PC_new is not None:
-            # Check if it's the new class-based PC (doesn't take data in __init__)
             import inspect
             sig = inspect.signature(PC_new.__init__)
-            if 'data' not in sig.parameters:
-                pc = PC_new(
-                    variant=self.variant,
-                    ci_test=self.ci_test_str,
-                    significance_level=self.alpha,
-                    show_progress=False,
-                    return_type='dag'
-                )
+            params = sig.parameters
+            
+            # Build arguments based on what __init__ accepts
+            kwargs = {}
+            if 'variant' in params: kwargs['variant'] = self.variant
+            if 'ci_test' in params: kwargs['ci_test'] = self.ci_test_str
+            if 'significance_level' in params: kwargs['significance_level'] = self.alpha
+            if 'show_progress' in params: kwargs['show_progress'] = False
+            if 'return_type' in params: kwargs['return_type'] = 'dag'
+            
+            # Check if it's the new class-based PC (doesn't take data in __init__)
+            if 'data' not in params:
+                pc = PC_new(**kwargs)
                 pc.fit(data)
                 return pc.causal_graph_
 
@@ -80,8 +84,6 @@ class GESMethod(BaseMethod):
 
     def fit(self, data: pd.DataFrame) -> DAG:
         # Determine the correct scoring string for the new API
-        # (Assuming continuous data for LinearGaussian and discrete for others)
-        # In a full implementation, we'd use pgmpy.utils.get_dataset_type(data)
         from pgmpy.utils import get_dataset_type
         dtype = get_dataset_type(data)
         
@@ -97,8 +99,17 @@ class GESMethod(BaseMethod):
         if GES_new is not None:
             import inspect
             sig = inspect.signature(GES_new.__init__)
-            if 'data' not in sig.parameters:
-                ges = GES_new(scoring_method=score_str, show_progress=False, return_type='dag')
+            params = sig.parameters
+            
+            # Build arguments based on what __init__ accepts
+            kwargs = {}
+            if 'scoring_method' in params: kwargs['scoring_method'] = score_str
+            if 'return_type' in params: kwargs['return_type'] = 'dag'
+            # GES dev version doesn't seem to have show_progress in __init__
+            if 'show_progress' in params: kwargs['show_progress'] = False
+            
+            if 'data' not in params:
+                ges = GES_new(**kwargs)
                 ges.fit(data)
                 return ges.causal_graph_
 
