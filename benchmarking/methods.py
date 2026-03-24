@@ -15,21 +15,33 @@ def _import_pgmpy_item(module_paths, item_name):
     raise ImportError(f"Could not find {item_name} in any of {module_paths}")
 
 # Robustly import required pgmpy classes
-try:
-    PC = _import_pgmpy_item(['pgmpy.estimators', 'pgmpy.estimators.PC'], 'PC')
-    GES = _import_pgmpy_item(['pgmpy.estimators', 'pgmpy.causal_discovery', 'pgmpy.estimators.GES'], 'GES')
-    
-    # CI Tests
-    pearsonr = _import_pgmpy_item(['pgmpy.estimators.CITests', 'pgmpy.estimators'], 'pearsonr')
-    chi_square = _import_pgmpy_item(['pgmpy.estimators.CITests', 'pgmpy.estimators'], 'chi_square')
-    
-    # Scoring methods
-    BicScore = _import_pgmpy_item(['pgmpy.estimators', 'pgmpy.estimators.scoring', 'pgmpy.scoring'], 'BicScore')
-    BDeuScore = _import_pgmpy_item(['pgmpy.estimators', 'pgmpy.estimators.scoring', 'pgmpy.scoring'], 'BDeuScore')
-    K2Score = _import_pgmpy_item(['pgmpy.estimators', 'pgmpy.estimators.scoring', 'pgmpy.scoring'], 'K2Score')
-except ImportError as e:
-    # Fallback for logging if pgmpy isn't fully set up yet
-    print(f"Warning: {e}")
+def _safe_import(paths, name):
+    try:
+        return _import_pgmpy_item(paths, name)
+    except ImportError:
+        return None
+
+PC = _safe_import(['pgmpy.causal_discovery', 'pgmpy.estimators', 'pgmpy.estimators.PC'], 'PC')
+GES = _safe_import(['pgmpy.causal_discovery', 'pgmpy.estimators', 'pgmpy.estimators.GES'], 'GES')
+
+# CI Tests - trying new naming convention from warnings
+pearsonr = _safe_import(['pgmpy.ci_tests', 'pgmpy.estimators.CITests', 'pgmpy.estimators'], 'pearsonr')
+if pearsonr is None:
+    pearsonr = _safe_import(['pgmpy.ci_tests'], 'Pearsonr')
+
+chi_square = _safe_import(['pgmpy.ci_tests', 'pgmpy.estimators.CITests', 'pgmpy.estimators'], 'chi_square')
+if chi_square is None:
+    chi_square = _safe_import(['pgmpy.ci_tests'], 'ChiSquare')
+
+# Scoring methods
+BicScore = _safe_import(['pgmpy.estimators.scoring', 'pgmpy.estimators', 'pgmpy.scoring'], 'BicScore')
+BDeuScore = _safe_import(['pgmpy.estimators.scoring', 'pgmpy.estimators', 'pgmpy.scoring'], 'BDeuScore')
+K2Score = _safe_import(['pgmpy.estimators.scoring', 'pgmpy.estimators', 'pgmpy.scoring'], 'K2Score')
+
+# Final verification
+missing = [name for name, val in [('PC', PC), ('GES', GES), ('pearsonr', pearsonr), ('BicScore', BicScore)] if val is None]
+if missing:
+    print(f"Warning: The following pgmpy components could not be found: {', '.join(missing)}")
 
 class PCMethod(BaseMethod):
     """
