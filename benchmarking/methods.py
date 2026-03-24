@@ -32,11 +32,22 @@ class GESMethod(BaseMethod):
         self.score = score
 
     def fit(self, data: pd.DataFrame) -> DAG:
-        ges = GES(data=data)
-        return ges.estimate(
-            score=self.score,
-            show_progress=False
-        )
+        from pgmpy.estimators import GES
+        from pgmpy.scoring import BicScore, BDeuScore, K2Score
+        
+        # Initialize the score object
+        if self.score.lower() == "bic":
+            score_obj = BicScore(data)
+        elif self.score.lower() == "bdeu":
+            score_obj = BDeuScore(data)
+        elif self.score.lower() == "k2":
+            score_obj = K2Score(data)
+        else:
+            raise ValueError(f"Unsupported score: {self.score}")
+
+        # In newer pgmpy, GES is initialized with the score object
+        ges = GES(data=data, score=score_obj)
+        return ges.estimate(show_progress=False)
 
     @property
     def name(self) -> str:
