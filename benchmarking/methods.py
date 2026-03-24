@@ -1,6 +1,9 @@
 import pandas as pd
 from pgmpy.base import DAG
-from pgmpy.estimators import PC, GES
+from pgmpy.estimators import PC
+from pgmpy.causal_discovery import GES
+from pgmpy.estimators.CITests import pearsonr, chi_square
+from pgmpy.estimators.scoring import BicScore, BDeuScore, K2Score
 from .base import BaseMethod
 
 class PCMethod(BaseMethod):
@@ -8,21 +11,28 @@ class PCMethod(BaseMethod):
     Wrapper for pgmpy's PC algorithm.
     """
     def __init__(self, ci_test="pearsonr", alpha=0.05):
-        self.ci_test = ci_test
+        self.ci_test_str = ci_test
         self.alpha = alpha
 
     def fit(self, data: pd.DataFrame) -> DAG:
+        if self.ci_test_str == "pearsonr":
+            ci_func = pearsonr
+        elif self.ci_test_str == "chi_square":
+            ci_func = chi_square
+        else:
+            raise ValueError(f"Unsupported ci_test: {self.ci_test_str}")
+
         pc = PC(data=data)
         return pc.estimate(
-            ci_test=self.ci_test,
+            variant='stable',
+            ci_test=ci_func,
             significance_level=self.alpha,
-            return_type="dag",
             show_progress=False
         )
 
     @property
     def name(self) -> str:
-        return f"PC({self.ci_test})"
+        return f"PC({self.ci_test_str})"
 
 class GESMethod(BaseMethod):
     """
@@ -32,10 +42,6 @@ class GESMethod(BaseMethod):
         self.score = score
 
     def fit(self, data: pd.DataFrame) -> DAG:
-        from pgmpy.estimators import GES
-        from pgmpy.scoring import BicScore, BDeuScore, K2Score
-        
-        # Initialize the score object
         if self.score.lower() == "bic":
             score_obj = BicScore(data)
         elif self.score.lower() == "bdeu":
@@ -45,9 +51,8 @@ class GESMethod(BaseMethod):
         else:
             raise ValueError(f"Unsupported score: {self.score}")
 
-        # In newer pgmpy, GES is initialized with the score object
-        ges = GES(data=data, score=score_obj)
-        return ges.estimate(show_progress=False)
+        ges = GES(data)
+        return ges.estimate(scoring_method=score_obj, show_progress=False)
 
     @property
     def name(self) -> str:
