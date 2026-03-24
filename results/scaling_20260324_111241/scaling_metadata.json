@@ -1,0 +1,425 @@
+{
+    "data": [
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 1,
+            "Runtime (s)": 7.505006313323975,
+            "SHD": 3.0,
+            "Precision": 0.6666666666666666,
+            "Recall": 0.6666666666666666,
+            "F1-Score": 0.6666666666666666
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 1,
+            "Runtime (s)": 0.27190136909484863,
+            "SHD": 0.0,
+            "Precision": 1.0,
+            "Recall": 1.0,
+            "F1-Score": 1.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 2,
+            "Runtime (s)": 0.04688620567321777,
+            "SHD": 10.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 2,
+            "Runtime (s)": 0.25666141510009766,
+            "SHD": 4.0,
+            "Precision": 0.5,
+            "Recall": 0.6666666666666666,
+            "F1-Score": 0.5714285714285715
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 3,
+            "Runtime (s)": 0.035736083984375,
+            "SHD": 4.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 3,
+            "Runtime (s)": 0.2127997875213623,
+            "SHD": 4.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 4,
+            "Runtime (s)": 0.06746602058410645,
+            "SHD": 0.0,
+            "Precision": 1.0,
+            "Recall": 1.0,
+            "F1-Score": 1.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 4,
+            "Runtime (s)": 0.34447622299194336,
+            "SHD": 12.0,
+            "Precision": 0.14285714285714285,
+            "Recall": 0.25,
+            "F1-Score": 0.18181818181818182
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 5,
+            "Runtime (s)": 0.035744667053222656,
+            "SHD": 4.0,
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=5, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 5,
+            "Runtime (s)": 0.3137357234954834,
+            "SHD": 0.0,
+            "Precision": 1.0,
+            "Recall": 1.0,
+            "F1-Score": 1.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 1,
+            "Runtime (s)": 0.38848376274108887,
+            "SHD": 14.0,
+            "Precision": 0.6666666666666666,
+            "Recall": 0.42857142857142855,
+            "F1-Score": 0.5217391304347826
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 1,
+            "Runtime (s)": 2.3029913902282715,
+            "SHD": 23.0,
+            "Precision": 0.4090909090909091,
+            "Recall": 0.6428571428571429,
+            "F1-Score": 0.5000000000000001
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 2,
+            "Runtime (s)": 0.15941810607910156,
+            "SHD": 14.0,
+            "Precision": 0.42857142857142855,
+            "Recall": 0.3333333333333333,
+            "F1-Score": 0.375
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 2,
+            "Runtime (s)": 1.424173355102539,
+            "SHD": 18.0,
+            "Precision": 0.3333333333333333,
+            "Recall": 0.4444444444444444,
+            "F1-Score": 0.380952380952381
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 3,
+            "Runtime (s)": 0.18598484992980957,
+            "SHD": 5.0,
+            "Precision": 0.8571428571428571,
+            "Recall": 0.6666666666666666,
+            "F1-Score": 0.75
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 3,
+            "Runtime (s)": 1.2932283878326416,
+            "SHD": 0.0,
+            "Precision": 1.0,
+            "Recall": 1.0,
+            "F1-Score": 1.0
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 4,
+            "Runtime (s)": 0.20174646377563477,
+            "SHD": 9.0,
+            "Precision": 0.6666666666666666,
+            "Recall": 0.6666666666666666,
+            "F1-Score": 0.6666666666666666
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 4,
+            "Runtime (s)": 1.332019567489624,
+            "SHD": 6.0,
+            "Precision": 0.7777777777777778,
+            "Recall": 0.7777777777777778,
+            "F1-Score": 0.7777777777777778
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 5,
+            "Runtime (s)": 0.30380988121032715,
+            "SHD": 7.0,
+            "Precision": 0.8,
+            "Recall": 0.7272727272727273,
+            "F1-Score": 0.761904761904762
+        },
+        {
+            "Simulator": "LinearGaussian(n=10, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 5,
+            "Runtime (s)": 2.2245168685913086,
+            "SHD": 30.0,
+            "Precision": 0.20833333333333334,
+            "Recall": 0.45454545454545453,
+            "F1-Score": 0.28571428571428575
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 1,
+            "Runtime (s)": 2.81365704536438,
+            "SHD": 48.0,
+            "Precision": 0.5714285714285714,
+            "Recall": 0.17777777777777778,
+            "F1-Score": 0.2711864406779661
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 1,
+            "Runtime (s)": 19.589386701583862,
+            "SHD": 106.0,
+            "Precision": 0.25,
+            "Recall": 0.4888888888888889,
+            "F1-Score": 0.3308270676691729
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 2,
+            "Runtime (s)": 2.0513811111450195,
+            "SHD": 35.0,
+            "Precision": 0.6875,
+            "Recall": 0.2972972972972973,
+            "F1-Score": 0.41509433962264153
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 2,
+            "Runtime (s)": 16.57813000679016,
+            "SHD": 118.0,
+            "Precision": 0.16304347826086957,
+            "Recall": 0.40540540540540543,
+            "F1-Score": 0.23255813953488372
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 3,
+            "Runtime (s)": 2.904006004333496,
+            "SHD": 43.0,
+            "Precision": 0.47368421052631576,
+            "Recall": 0.25,
+            "F1-Score": 0.32727272727272727
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 3,
+            "Runtime (s)": 12.211418151855469,
+            "SHD": 43.0,
+            "Precision": 0.4915254237288136,
+            "Recall": 0.8055555555555556,
+            "F1-Score": 0.6105263157894737
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 4,
+            "Runtime (s)": 3.2935900688171387,
+            "SHD": 39.0,
+            "Precision": 0.6363636363636364,
+            "Recall": 0.1794871794871795,
+            "F1-Score": 0.28
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 4,
+            "Runtime (s)": 18.238909482955933,
+            "SHD": 99.0,
+            "Precision": 0.24731182795698925,
+            "Recall": 0.5897435897435898,
+            "F1-Score": 0.3484848484848485
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 5,
+            "Runtime (s)": 3.3134055137634277,
+            "SHD": 57.0,
+            "Precision": 0.5,
+            "Recall": 0.1346153846153846,
+            "F1-Score": 0.21212121212121213
+        },
+        {
+            "Simulator": "LinearGaussian(n=20, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 5,
+            "Runtime (s)": 22.92570424079895,
+            "SHD": 109.0,
+            "Precision": 0.30701754385964913,
+            "Recall": 0.6730769230769231,
+            "F1-Score": 0.4216867469879518
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 1,
+            "Runtime (s)": 8.84846305847168,
+            "SHD": 105.0,
+            "Precision": 0.5,
+            "Recall": 0.10101010101010101,
+            "F1-Score": 0.16806722689075632
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 1,
+            "Runtime (s)": 98.27172470092773,
+            "SHD": 332.0,
+            "Precision": 0.13385826771653545,
+            "Recall": 0.3434343434343434,
+            "F1-Score": 0.1926345609065156
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 2,
+            "Runtime (s)": 8.57201623916626,
+            "SHD": 105.0,
+            "Precision": 0.3157894736842105,
+            "Recall": 0.06593406593406594,
+            "F1-Score": 0.1090909090909091
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 2,
+            "Runtime (s)": 81.87040138244629,
+            "SHD": 261.0,
+            "Precision": 0.17889908256880735,
+            "Recall": 0.42857142857142855,
+            "F1-Score": 0.2524271844660194
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 3,
+            "Runtime (s)": 9.293510437011719,
+            "SHD": 101.0,
+            "Precision": 0.36363636363636365,
+            "Recall": 0.0963855421686747,
+            "F1-Score": 0.15238095238095242
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 3,
+            "Runtime (s)": 70.88867712020874,
+            "SHD": 251.0,
+            "Precision": 0.17073170731707318,
+            "Recall": 0.42168674698795183,
+            "F1-Score": 0.24305555555555555
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 4,
+            "Runtime (s)": 6.575308322906494,
+            "SHD": 73.0,
+            "Precision": 0.8,
+            "Recall": 0.1951219512195122,
+            "F1-Score": 0.3137254901960785
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 4,
+            "Runtime (s)": 87.6668803691864,
+            "SHD": 275.0,
+            "Precision": 0.16017316017316016,
+            "Recall": 0.45121951219512196,
+            "F1-Score": 0.23642172523961663
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "PC(pearsonr)",
+            "Run": 5,
+            "Runtime (s)": 10.94443154335022,
+            "SHD": 130.0,
+            "Precision": 0.36363636363636365,
+            "Recall": 0.06956521739130435,
+            "F1-Score": 0.11678832116788321
+        },
+        {
+            "Simulator": "LinearGaussian(n=30, s=1000, d=0.2)",
+            "Method": "GES(bic)",
+            "Run": 5,
+            "Runtime (s)": 103.05936765670776,
+            "SHD": 341.0,
+            "Precision": 0.14285714285714285,
+            "Recall": 0.3130434782608696,
+            "F1-Score": 0.19618528610354224
+        }
+    ],
+    "metadata": {
+        "timestamp": "2026-03-24T11:22:50.343159",
+        "n_runs": 5,
+        "random_state": 42,
+        "simulators": [
+            "LinearGaussian(n=5, s=1000, d=0.2)",
+            "LinearGaussian(n=10, s=1000, d=0.2)",
+            "LinearGaussian(n=20, s=1000, d=0.2)",
+            "LinearGaussian(n=30, s=1000, d=0.2)"
+        ],
+        "methods": [
+            "PC(pearsonr)",
+            "GES(bic)"
+        ],
+        "metrics": [
+            "SHD",
+            "Precision",
+            "Recall",
+            "F1-Score"
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+# 1. Pull the new scaling benchmark code
+git pull origin master
+
+# 2. Run the scaling study (this uses the T4 GPU for CI tests)
+python run_scaling_benchmark.py

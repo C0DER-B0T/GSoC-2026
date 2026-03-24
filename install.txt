@@ -1,0 +1,8 @@
+# 1. Force reinstall pgmpy from the local source, ignoring the broken metadata
+pip install --force-reinstall --ignore-installed -e ./pgmpy_source[all]
+
+# 2. Pull the latest code fix from GitHub
+git pull origin master
+
+# 3. Run the scaling benchmark
+python run_scaling_benchmark.py
